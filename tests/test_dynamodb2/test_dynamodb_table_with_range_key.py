@@ -777,6 +777,14 @@ def test_update_item_range_key_set():
                 'Action': u'PUT',
                 'Value': 'johndoe2'
             },
+            'created': {
+                'Action': u'PUT',
+                'Value': Decimal('4'),
+            },
+            'mapfield': {
+                'Action': u'PUT',
+                'Value': {'key': 'value'},
+            }
         },
     )
 
@@ -785,7 +793,8 @@ def test_update_item_range_key_set():
         'username': "johndoe2",
         'forum_name': 'the-key',
         'subject': '123',
-        'created': Decimal('3'),
+        'created': Decimal('4'),
+        'mapfield': {'key': 'value'},
     })
 
 
